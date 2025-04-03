@@ -29,6 +29,9 @@ self.addEventListener("fetch", (e) => {
         if (!navigator.onLine) {
           res && res;
         }
+
+        const url = e.request.clone();
+        fetch(url);
       })
       .catch((e) => console.log(e))
   );
